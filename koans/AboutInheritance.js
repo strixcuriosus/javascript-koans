@@ -80,10 +80,10 @@ describe("About Crockford's inheritance improvement", function() {
   
   it("should set constructor parameters on the base object", function() {
     expect(this.gonzo.age).toEqual(3);
-    expect(this.gonzo.hobby).toEqual("derived performer");
+    expect(this.gonzo.hobby).toEqual("daredevil performer");
   });
   
   it("should set constructor parameters on the derived object", function() {
-    expect(this.gonzo.trick).toEqual(FILL_ME_IN);
+    expect(this.gonzo.trick).toEqual("eat a tire");
   });
 });
