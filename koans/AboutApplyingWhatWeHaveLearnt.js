@@ -89,10 +89,17 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should count the ingredient occurrence (functional)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
-
+    _.flatten(products.map(function(pizza){return pizza.ingredients})).reduce(
+      function(a, b){
+        if (!a[b]){
+          a[b] = 0;
+        }
+        a[b] += 1;
+        return a;
+      }, ingredientCount)
     /* chain() together map(), flatten() and reduce() */
 
-    expect(ingredientCount['mushrooms']).toBe(FILL_ME_IN);
+    expect(ingredientCount['mushrooms']).toBe(2);
   });
 
   /*********************************************************************************/
